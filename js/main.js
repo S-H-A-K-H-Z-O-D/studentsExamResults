@@ -75,25 +75,26 @@ function addStudent(evt){
      renderStudents(students);
      count(students)
 }
+function beforeEdit(id){
 
      let onEdit = (e) => {
           e.preventDefault();
 
-          console.log(e.target)
-          // students.forEach(el => {
-          //      if(el.id == id){
-          //           el.name = elEditName.value;
-          //           el.lastName = elEditLastname.value;
-          //           el.mark = elEditMark.value;
-          //      }
-          // })
-          // renderStudents(students);
-          // count(students);
-          // console.log(students)
+          // console.log(e.target)
+          students.forEach(el => {
+               if(el.id == id){
+                    el.name = elEditName.value;
+                    el.lastName = elEditLastname.value;
+                    el.mark = elEditMark.value;
+               }
+          })
+          renderStudents(students);
+          count(students);
+          console.log(students)
      }
      
      elEditForm.addEventListener('submit', onEdit);
-// }
+}
 
 function beforeDelete(id){
      let delArr = [];
@@ -120,7 +121,7 @@ function onFix(evt){
                     elEditMark.value = el.mark; 
                }
           })
-          // beforeEdit(evt.target.closest('tr').dataset.id);
+          beforeEdit(evt.target.closest('tr').dataset.id);
      };
 
      if(evt.target.matches('.student-delete')){
