@@ -42,10 +42,12 @@
           <div class="mb-3">
             <label for="sortby" class="form-label">Sort by</label>
             <select class="form-select" id="sortby">
-              <option value="1">Name</option>
-              <option value="2">Mark: to lowest</option>
-              <option value="3">Mark: to highest</option>
-              <option value="4">Marked date</option>
+              <option value="" disabled selected>Select sorting type</option>
+              <option value="az">AZ-az</option>
+              <option value="za">ZA-za</option>
+              <option value="markToLow">Mark: to lowest</option>
+              <option value="markToHigh">Mark: to highest</option>
+              <option value="date">Marked date</option>
             </select>
           </div>
 
@@ -151,7 +153,8 @@
         </p>
       </td>
       <td class="py-3 text-center">
-        <button class="btn btn-outline-secondary student-edit" data-bs-toggle="modal" data-bs-target="#edit-student-modal">
+        <button class="btn btn-outline-secondary student-edit" data-bs-toggle="modal"
+          data-bs-target="#edit-student-modal">
           <i class="fa-solid fa-pen" style="pointer-events: none;"></i>
         </button>
       </td>
@@ -164,7 +167,7 @@
   </template>
 
 
-  <script src="https://kit.fontawesome.com/1a052ad93a.js" crossorigin="anonymous"></script> 
+  <script src="https://kit.fontawesome.com/1a052ad93a.js" crossorigin="anonymous"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
 
   <script src="js/data.js"></script>
